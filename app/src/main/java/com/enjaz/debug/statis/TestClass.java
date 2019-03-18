@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.enjaz.debug.logging.entities.NetworkCallInformation;
 import com.enjaz.debug.logging.entities.UserActivity;
-import com.enjaz.debug.logging.model.Common;
+import com.enjaz.debug.logging.helper.Common;
 import com.enjaz.debug.logging.model.LoggingImplement;
 
 class TestClass {
@@ -28,13 +28,13 @@ class TestClass {
     }
 
     private void storeUserActivityTestData() {
-        UserActivity userActivity = new UserActivity("qicard", "qicard", "classqicard", Common.getdatenow2());
+        UserActivity userActivity = new UserActivity("qicard", "qicard", "classqicard", Common.getHours());
         mainModel.storeUserActivity(userActivity);
-        UserActivity userActivity2 = new UserActivity("qigide", "qigide", "classqicard", Common.getdatenow2());
+        UserActivity userActivity2 = new UserActivity("qigide", "qigide", "classqicard", Common.getHours());
         mainModel.storeUserActivity(userActivity2);
-        UserActivity userActivity3 = new UserActivity("payroll", "payroll", "classqicard", Common.getdatenow2());
+        UserActivity userActivity3 = new UserActivity("payroll", "payroll", "classqicard", Common.getHours());
         mainModel.storeUserActivity(userActivity3);
-        UserActivity userActivity4 = new UserActivity("tacsset", "tacsset", "classqicard", Common.getdatenow2());
+        UserActivity userActivity4 = new UserActivity("tacsset", "tacsset", "classqicard", Common.getHours());
         mainModel.storeUserActivity(userActivity4);
 
     }

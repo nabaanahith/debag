@@ -4,6 +4,8 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
+import java.util.Date;
+
 @Entity(tableName = "MemoryMonitoring")
 public class MemoryMonitoring {
     @PrimaryKey(autoGenerate = true)
@@ -14,14 +16,24 @@ public class MemoryMonitoring {
     private long usedMemory;
     private long maxHeapSize;
     private long availableHeapSize;
+    private Date hours;
 
-    public MemoryMonitoring(@NonNull int memoryId, long totalMemory, long freeMemory, long usedMemory, long maxHeapSize, long availableHeapSize) {
+    public MemoryMonitoring(@NonNull int memoryId, long totalMemory, long freeMemory, long usedMemory, long maxHeapSize, long availableHeapSize, Date hours) {
         this.memoryId = memoryId;
         this.totalMemory = totalMemory;
         this.freeMemory = freeMemory;
         this.usedMemory = usedMemory;
         this.maxHeapSize = maxHeapSize;
         this.availableHeapSize = availableHeapSize;
+        this.hours = hours;
+    }
+
+    public Date getHours() {
+        return hours;
+    }
+
+    public void setHours(Date hours) {
+        this.hours = hours;
     }
 
     @NonNull

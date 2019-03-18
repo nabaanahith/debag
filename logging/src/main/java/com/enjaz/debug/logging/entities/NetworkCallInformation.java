@@ -13,13 +13,14 @@ public class NetworkCallInformation implements Serializable {
     private int failureId;
     private String OSVersion;
     private int sdkVersion;
+    private String userToken;
+    private String mobileModel;
+    private String mobileNumber;
+
     private String applicationVersion;
     private String requestUrl;
     private String requestParameters;
     private String responseMessage;
-    private String userToken;
-    private String mobileModel;
-    private String mobileNumber;
     private String requestDate;
     private String requestName;
     private String deviceLanguage;
@@ -42,8 +43,6 @@ public class NetworkCallInformation implements Serializable {
 
 
     }
-
-
 
 
     public String getOSVersion() {
@@ -141,6 +140,7 @@ public class NetworkCallInformation implements Serializable {
     public void setDeviceLanguage(String deviceLanguage) {
         this.deviceLanguage = deviceLanguage;
     }
+
     public int getFailureId() {
         return failureId;
     }

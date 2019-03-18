@@ -11,6 +11,9 @@ import com.enjaz.debug.logging.entities.UserActivity;
 
 
 @Database(entities={NetworkCallInformation.class, UserActivity.class,MemoryMonitoring.class}, version = 1, exportSchema = false)
+
+
+  //preparing  for room db synchronized
     public abstract class LoggingDB extends RoomDatabase
 
     {

@@ -55,7 +55,7 @@ public class RepositoryDB {
     }
     //insert networkCallInformation
 
-    public void insertNetworkCallInformation(NetworkCallInformation networkCallInformation) {
+    void insertNetworkCallInformation(NetworkCallInformation networkCallInformation) {
         daoInterface.insertNetworkCallInformation(networkCallInformation);
 
 
@@ -63,21 +63,21 @@ public class RepositoryDB {
 
     //insert userActivity
 
-    public void insertUserActivity(UserActivity userActivity) {
+    void insertUserActivity(UserActivity userActivity) {
         daoInterface.insertUserActivity(userActivity);
 
 
     }
     //insert Memory logging
 
-    public void insertMemoryLogging(MemoryMonitoring memoryMonitoring) {
+    void insertMemoryLogging(MemoryMonitoring memoryMonitoring) {
         daoInterface.insertMemoryLogging(memoryMonitoring);
 
 
     }
     //update userActivity
 
-    public void updateUserActivity(int count, String date, String id) {
+    void updateUserActivity(int count, String date, String id) {
         daoInterface.Update(count, date, id);
 
 
