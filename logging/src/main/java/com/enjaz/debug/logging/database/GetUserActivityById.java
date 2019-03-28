@@ -2,23 +2,29 @@ package com.enjaz.debug.logging.database;
 
 import android.content.Context;
 
-import com.enjaz.debug.logging.entities.UserActivity;
+import com.enjaz.debug.logging.entities.UserActivityTable;
 
-public class GetUserActivityById extends android.os.AsyncTask<Void, Void, UserActivity> {
-   private RepositoryDB RepositoryDB;
-   private String id;
 
-    private GetUserActivityById(Context context, String id) {
+public class GetUserActivityById extends android.os.AsyncTask<Void, Void, UserActivityTable> {
+    //get activity by id
+    private com.enjaz.debug.logging.database.RepositoryDB repositoryDB;
+    private int id;
 
-        RepositoryDB = new RepositoryDB(context);
+    public GetUserActivityById(Context context, int id) {
+
+        repositoryDB = new RepositoryDB(context);
+
         this.id = id;
     }
 
+
+
     @Override
-    protected UserActivity doInBackground(Void... weatherResponses) {
+    protected UserActivityTable doInBackground(Void... voids) {
 
 
-        return RepositoryDB.getUserActivityById(id);
+        return repositoryDB.getUserActivityById(id);
     }
+
 
 }

@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="card_corner_margin">16dp</dimen>
+    <dimen name="chart_margin">8dp</dimen>
+    <dimen name="tex_size">17sp</dimen>
+    <dimen name="margin">8dp</dimen>
+</resources>

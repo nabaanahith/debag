@@ -1,48 +1,32 @@
 package com.enjaz.debug.logging.entities;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
-
-@Entity(tableName = "UserActivity")
-
 public class UserActivity {
-    @PrimaryKey
-    @NonNull
-    private String platformType;
-    private String date;
+    private PlatformType platformType;
+    private long date;
+    private String classFullName;
+    private String activityName;
 
-    //   private PlatformType platformType;
-    private String classFullName; //class full path
-    private String activityName; //user friendly name
-    private int count = 0;
-
-    public UserActivity(@NonNull String platformType, String date, String classFullName, String activityName) {
+    public UserActivity(PlatformType platformType, long date, String classFullName, String activityName) {
         this.platformType = platformType;
         this.date = date;
         this.classFullName = classFullName;
         this.activityName = activityName;
-
-    }
-    //  private Date date;
-
-
-
-    public int getCount() {
-        return count;
     }
 
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-
-    public String getPlatformType() {
+    public PlatformType getPlatformType() {
         return platformType;
     }
 
-    public void setPlatformType(String platformType) {
+    public void setPlatformType(PlatformType platformType) {
         this.platformType = platformType;
+    }
+
+    public long getDate() {
+        return date;
+    }
+
+    public void setDate(long date) {
+        this.date = date;
     }
 
     public String getClassFullName() {
@@ -59,13 +43,5 @@ public class UserActivity {
 
     public void setActivityName(String activityName) {
         this.activityName = activityName;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
     }
 }
