@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimary">#3C3C4A</color>
+    <color name="colorPrimaryDark">#3C3C4A</color>
+    <color name="colorAccent">#cdad00</color>
+    <color name="colorBlueTransparency">#25764828</color>
+
+    <color name="colorPayRoll">#FFAE817C</color>
+
+    <color name="colorQiCard">#D99710</color>
+    <color name="colorAQSATI">#FF22548E</color>
+    <color name="colorTASDEED">#55CE63</color>
+    <color name="colorBlack">#383840</color>
+    <color name="AccetsColor">#A3CDAD00</color>
+
 </resources>
