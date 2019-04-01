@@ -1,18 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/colorPrimaryDark"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/test_AQSATI"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="0dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="false">
 
-</android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#BDBDBD"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Test AQSATI"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/test_TASDEED"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_AQSATI"
+        android:layout_alignParentStart="true"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        app:cardElevation="7dp"
+        app:cardUseCompatPadding="false">
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9E9E9E"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Test TASDEED"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/test_QI_GUIDE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_TASDEED"
+        android:layout_marginTop="0dp"
+        android:background="?android:selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="6dp"
+        app:cardUseCompatPadding="false">
+
+
+        <TextView
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:background="#757575"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:paddingTop="15dp"
+            android:text=" Test QI_GUIDE"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/test_PAYROLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_QI_GUIDE"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="false">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#616161"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:paddingTop="15dp"
+            android:text="Test PAYROLL "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/test_Network"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_PAYROLL"
+        android:layout_marginTop="0dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="false">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#565151"
+            android:fontFamily="sans-serif"
+            android:padding="10dp"
+            android:text="Test Network"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_Network"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/enable_memory_monitoring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:layout_weight="1"
+            android:background="#565151"
+            android:text="Enable Memory Monitoring "
+            android:textColor="@android:color/white"
+
+            />
+
+        <Button
+            android:id="@+id/disable_memory_monitoring"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:layout_weight="1"
+            android:background="#565151"
+            android:text="Disable Memory Monitoring "
+            android:textColor="@android:color/white"
+
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dash_board"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin"
+        android:background="@color/colorAccent"
+        android:text=" Dashboard"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
+

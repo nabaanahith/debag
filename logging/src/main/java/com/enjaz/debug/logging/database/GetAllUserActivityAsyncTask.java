@@ -1,25 +1,29 @@
 package com.enjaz.debug.logging.database;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 
-import com.enjaz.debug.logging.entities.UserActivity;
+
+import com.enjaz.debug.logging.entities.UserActivityTable;
 
 import java.util.List;
 
-public class GetAllUserActivityAsyncTask extends android.os.AsyncTask<Void, Void, List<UserActivity>> {
-   private RepositoryDB RepositoryDB;
+public class GetAllUserActivityAsyncTask extends android.os.AsyncTask<Void, Void, List<UserActivityTable>> {
+    private RepositoryDB repositoryDB;
+    @SuppressLint("StaticFieldLeak")
 
+    public GetAllUserActivityAsyncTask(Context context) {
 
-    private GetAllUserActivityAsyncTask(Context context, String objectType) {
-        RepositoryDB = new RepositoryDB(context);
+        repositoryDB = new RepositoryDB(context);
 
 
     }
 
     @Override
-    protected List<UserActivity> doInBackground(Void... weatherResponses) {
+    protected List<UserActivityTable> doInBackground(Void... voids) {
 
 
-        return RepositoryDB.getAllUserActivity();
+        return repositoryDB.getAllUserActivity();
     }
+
 }

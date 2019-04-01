@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.enjaz.debug.logging">
+    <!--export tables to excel !-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +20,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.ResourcesUsageActivity" />
+        <activity android:name=".view.UserViewActivity" />
+        <activity android:name=".view.NetworkFailureActivity"/>
+        <activity android:name=".view.NetworkActivityDetails"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".view.UserActivityDetails"
+            android:screenOrientation="portrait"/>
+
+        <receiver
+            android:name=".database.DeleteBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+
     </application>
 
 </manifest>
